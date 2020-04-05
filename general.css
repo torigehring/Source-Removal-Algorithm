@@ -62,3 +62,11 @@ h1 {
   -ms-transform: rotate(330deg);
   transform: rotate(330deg);
 }
+
+.rotate340 {
+  -webkit-transform: rotate(340deg);
+  -moz-transform: rotate(340deg);
+  -o-transform: rotate(340deg);
+  -ms-transform: rotate(340deg);
+  transform: rotate(340deg);
+}
