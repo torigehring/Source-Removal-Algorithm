@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -19,13 +18,41 @@
 			
 			var showHints = false;
 			
-			function funNumStones() {
-
+			function funNumVertices() {
 			   numVertices = parseInt(document.getElementById("numVertices").value, 10);
-               // TODO: implement this function's functionality
-               
+               // TODO: implement this function's functionality   
 			}
-		
+			function nextStep() {
+			 
+			}
+			function chooseYes() {
+			     
+			}
+			function chooseNo() {
+			    
+			}
+			function removeFirst(button) {
+                var nodeID = button.id;
+                var nodeValue = button.value;
+                var list = document.getElementById("SortedList");
+                var hints = document.getElementById("Hints");
+                var arrow1 = document.getElementById("Bup");
+                var arrow2 = document.getElementById("Bright");
+                if(nodeID == "firstNode"){
+                    button.style.visibility = "hidden";
+                    arrow1.style.visibility = "hidden";
+                    arrow2.style.visibility = "hidden";
+                    list.innerHTML = "Sorted List: " + nodeValue;
+                    hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
+                }
+                else{
+                    list.innerHTML = "Sorted List: ";
+                    hints.innerHTML = "Incorrect. Node " + nodeValue + " was the one you were supposed to remove.";
+                }
+			}
+			function hint() {
+			    
+			}	
         </script>
     </head>
     <body onload="welcome()">
@@ -51,7 +78,7 @@
 <script>
  //welcome();
 </script>
-
+<!-- Beginning of Selection 5 Nodes-->
 <section>
     <h2>
         Goal: Remove all nodes using the source removal algorithm.
@@ -59,39 +86,41 @@
     <p> Here is a directed acyclic graph with 5 nodes. Click a node to remove it</p>
     <!-- Nodes have id's ANode, BNode, etc
          arrow images have id corresponding to their origin node -->
-    <button type="button" id="ANode" style="border-radius: 50%">Node A</button>
-    <img src="arrow1.jpg" id="A"alt="arrow" style="width:20px;height:10px;" >
-    <button type="button" id="CNode" style="border-radius: 50%">Node C</button>
-    <img src="arrow1.jpg" id="C" class="rotate30" alt="arrow" style="width:50px;height:10px;position:relative; top:15px" >
+    <button type="button" id="ANode" style="border-radius: 50%" onclick = "removeFirst(this)" value ="A" >Node A</button>
+    <img src="arrow1.jpg" id="Aright" alt="arrow" style="width:20px;height:10px;" >
+    <button type="button" id="CNode" style="border-radius: 50%" onclick = "removeFirst(this)" value = "C" >Node C</button>
+    <img src="arrow1.jpg" id="Cdown" class="rotate30" alt="arrow" style="width:50px;height:10px;position:relative; top:15px" >
+
     <section>
-        <img src="arrow1.jpg" id="A" class="rotate90" alt="arrow" style="width:40px;height:10px;position:relative; top:15px" >
-        <img src="arrow1.jpg" id="A" class="rotate30" alt="arrow" style="width:60px;height:10px;position:relative; top:15px" >
-        <img src="arrow1.jpg" id="D" class="rotate270" alt="arrow" style="width:40px;height:10px;position:relative; top:15px" >
+        <img src="arrow1.jpg" id="Bup" class="rotate270" alt="arrow" style="width:40px;height:10px;position:relative; top:15px" >
+        <img src="arrow1.jpg" id="Adown" class="rotate30" alt="arrow" style="width:60px;height:10px;position:relative; top:15px" >
+        <img src="arrow1.jpg" id="Dup" class="rotate270" alt="arrow" style="width:40px;height:10px;position:relative; top:15px" >
+
         <div style="position:relative; left:200px; top:0px">   
-            <button type="button" id="ENode" style="border-radius: 50%">Node E</button>
+            <button type="button" id="ENode" style="border-radius: 50%" onclick = "removeFirst(this)" value = "E">Node E</button>
         </div>
+        <div id = "SortedList" style="position:relative; left:400px; top:0px" >Sorted List:</div> <!-- This is where we can put the sorted list -->
     </section>
+
     <section>
-        <button type="button" id="BNode" style="border-radius: 50%">Node B</button>
-        <img src="arrow1.jpg" id="B" alt="arrow" style="width:20px;height:10px;" >
-        <button type="button" id="Dnode" style="border-radius: 50%;position:relative; bottom:0px" id="D">Node D</button>
-        <img src="arrow1.jpg" id="D" class="rotate340" alt="arrow" style="width:50px;height:10px;position:relative;" >
+        <button type="button" id="firstNode" style="border-radius: 50%" onclick = "removeFirst(this)" value = "B">Node B</button>
+        <img src="arrow1.jpg" id="Bright" alt="arrow" style="width:20px;height:10px;" >
+        <button type="button" id="Dnode" style="border-radius: 50%;position:relative; bottom:0px" id="D" onclick = "removeFirst(this)" value = "D">Node D</button>
+        <img src="arrow1.jpg" id="Dright" class="rotate340" alt="arrow" style="width:50px;height:10px;position:relative;" >
     </section>
+
     <section style="position:relative; left:20px; top:20px">
-        <button type="button" id="D">ShowMe</button>
+        <button type="button" id="Hint" onclick = "hint()">ShowMe</button>
     </section>
+
 </section>
+<!-- End of Selection 5 Nodes-->
 
 <section>
     <h2 style="position:relative; top:20px">
         Hints
     </h2>
-    <p style="position:relative; top:20px">
-        Correct! You removed the right node
-    </p>
-    <p style="position:relative; top:20px">
-        Incorrect! The node you removed has an arrow(s) into it from: A, B
-    </p>
+    <div style="position:relative; top:20px" id = "Hints"> </div>
 </section>
  <script>
  document.getElementById("KCapacity").onchange = function() {funKCapacity()};
