@@ -17,6 +17,11 @@
 			var myPseudocodeTableId = "myPseudocodeTable";
 			
 			var showHints = false;
+            var firstVisible = true;
+            var secVisible = true;
+            var thirdVisible = true;
+            var fourthVisible = true;
+            var fifthVisible = true;
 			
 			function funNumVertices() {
 			   numVertices = parseInt(document.getElementById("numVertices").value, 10);
@@ -36,20 +41,82 @@
                 var nodeValue = button.value;
                 var list = document.getElementById("SortedList");
                 var hints = document.getElementById("Hints");
-                var arrow1 = document.getElementById("Bup");
-                var arrow2 = document.getElementById("Bright");
-                if(nodeID == "firstNode"){
-                    button.style.visibility = "hidden";
-                    arrow1.style.visibility = "hidden";
-                    arrow2.style.visibility = "hidden";
-                    list.innerHTML = "Sorted List: " + nodeValue;
-                    hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
+
+                if(firstVisible == true){
+                    var arrow1 = document.getElementById("Bup");
+                    var arrow2 = document.getElementById("Bright");
+                    if(nodeID == "firstNode"){
+                        button.style.visibility = "hidden";
+                        arrow1.style.visibility = "hidden";
+                        arrow2.style.visibility = "hidden";
+                        list.innerHTML = "Sorted List: " + nodeValue;
+                        hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
+                        firstVisible = false;
+                    }
+                    else{
+                        hints.innerHTML = "Incorrect. Node " + nodeValue + " was not the one you were supposed to remove.";
+                    }
                 }
-                else{
-                    list.innerHTML = "Sorted List: ";
-                    hints.innerHTML = "Incorrect. Node " + nodeValue + " was not the one you were supposed to remove.";
-                }
+                
+                if(firstVisible == false){
+                    var arrow1 = document.getElementById("Aright");
+                    var arrow2 = document.getElementById("Adown");
+                    if(nodeID == "secondNode"){
+                        button.style.visibility = "hidden";
+                        arrow1.style.visibility = "hidden";
+                        arrow2.style.visibility = "hidden";
+                        list.innerHTML = "Sorted List: B" + nodeValue;
+                        hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
+                        secVisible = false;
+                    }
+                    else{
+                        hints.innerHTML = "Incorrect. Node " + nodeValue + " was not the one you were supposed to remove.";
+                    }
+                } 
+
+                if(secVisible == false){
+                    var arrow1 = document.getElementById("Dup");
+                    var arrow2 = document.getElementById("Dright");
+                    if(nodeID == "thirdNode"){
+                        button.style.visibility = "hidden";
+                        arrow1.style.visibility = "hidden";
+                        arrow2.style.visibility = "hidden";
+                        list.innerHTML = "Sorted List: BA" + nodeValue;
+                        hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
+                        thirdVisible = false;
+                    }
+                    else{
+                        hints.innerHTML = "Incorrect. Node " + nodeValue + " was not the one you were supposed to remove.";
+                    }
+                } 
+
+                if(thirdVisible == false){
+                    var arrow1 = document.getElementById("Cdown");
+                    if(nodeID == "fourthNode"){
+                        button.style.visibility = "hidden";
+                        arrow1.style.visibility = "hidden";
+                        list.innerHTML = "Sorted List: BAD" + nodeValue;
+                        hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
+                        fourthVisible = false;
+                    }
+                    else{
+                        hints.innerHTML = "Incorrect. Node " + nodeValue + " was not the one you were supposed to remove.";
+                    }
+                } 
+
+                if(fourthVisible == false){
+                    if(nodeID == "fifthNode"){
+                        button.style.visibility = "hidden";
+                        list.innerHTML = "Sorted List: BADC" + nodeValue;
+                        hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
+                        fifthVisible = false;
+                    }
+                    else{
+                        hints.innerHTML = "Incorrect. Node " + nodeValue + " was not the one you were supposed to remove.";
+                    }
+                } 
 			}
+
 			function hint() {
 			    
 			}	
@@ -68,8 +135,8 @@
 <p> How many vertices would you like to solve? </p>
     <select style="width: 80px" id="numStones" name="numStones">
     <option selected="">5</option>
-    <option>6</option>
-    <option>7</option> 
+    <option>coming soon</option>
+    <option>coming soon</option> 
     </select>
 <script>
     document.getElementById("numVertices").onchange = function() {funNumVertices()};
@@ -86,9 +153,9 @@
     <p> Here is a directed acyclic graph with 5 nodes. Click a node to remove it</p>
     <!-- Nodes have id's ANode, BNode, etc
          arrow images have id corresponding to their origin node -->
-    <button type="button" id="ANode" style="border-radius: 50%" onclick = "removeFirst(this)" value ="A" >Node A</button>
+    <button type="button" id="secondNode" style="border-radius: 50%" onclick = "removeFirst(this)" value ="A" >Node A</button>
     <img src="arrow1.jpg" id="Aright" alt="arrow" style="width:20px;height:10px;" >
-    <button type="button" id="CNode" style="border-radius: 50%" onclick = "removeFirst(this)" value = "C" >Node C</button>
+    <button type="button" id="fourthNode" style="border-radius: 50%" onclick = "removeFirst(this)" value = "C" >Node C</button>
     <img src="arrow1.jpg" id="Cdown" class="rotate30" alt="arrow" style="width:50px;height:10px;position:relative; top:15px" >
 
     <section>
@@ -97,7 +164,7 @@
         <img src="arrow1.jpg" id="Dup" class="rotate270" alt="arrow" style="width:40px;height:10px;position:relative; top:15px" >
 
         <div style="position:relative; left:200px; top:0px">   
-            <button type="button" id="ENode" style="border-radius: 50%" onclick = "removeFirst(this)" value = "E">Node E</button>
+            <button type="button" id="fifthNode" style="border-radius: 50%" onclick = "removeFirst(this)" value = "E">Node E</button>
         </div>
         <div id = "SortedList" style="position:relative; left:400px; top:0px" >Sorted List:</div> <!-- This is where we can put the sorted list -->
     </section>
@@ -105,7 +172,7 @@
     <section>
         <button type="button" id="firstNode" style="border-radius: 50%" onclick = "removeFirst(this)" value = "B">Node B</button>
         <img src="arrow1.jpg" id="Bright" alt="arrow" style="width:20px;height:10px;" >
-        <button type="button" id="Dnode" style="border-radius: 50%;position:relative; bottom:0px" id="D" onclick = "removeFirst(this)" value = "D">Node D</button>
+        <button type="button" id="thirdNode" style="border-radius: 50%;position:relative; bottom:0px" id="D" onclick = "removeFirst(this)" value = "D">Node D</button>
         <img src="arrow1.jpg" id="Dright" class="rotate340" alt="arrow" style="width:50px;height:10px;position:relative;" >
     </section>
 
