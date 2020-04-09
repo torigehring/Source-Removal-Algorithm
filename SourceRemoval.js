@@ -137,13 +137,13 @@ function yesnoCheck(that) {
 
 // Load the chosen graph in the correct location
 function loadGraph5(){
-    document.getElementById("5NodeGraph").innerHTML='<object type="text/html" data="fiveNode.html" ></object>';
+    document.getElementById("5NodeGraph").innerHTML='<object type="text/html" data="fiveNode.html" width="1000" height="1000" align="center"></object>';
 }
 
 function loadGraph6(){
-    document.getElementById("6NodeGraph").innerHTML='<object type="text/html" data="sixNode.html" ></object>';
+    document.getElementById("6NodeGraph").innerHTML='<object type="text/html" data="sixNode.html" width="1000" height="1000" align="center"></object>';
 }
 
 function loadGraph7(){
-    document.getElementById("7NodeGraph").innerHTML='<object type="text/html" data="sevenNode.html" ></object>';
+    document.getElementById("7NodeGraph").innerHTML='<object type="text/html" data="sevenNode.html" width="1000" height="10000" align="center"></object>';
 }

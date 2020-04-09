@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
     <head>
 		<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
@@ -11,11 +11,13 @@
         <script type="text/javascript" src="../pseudocodeFunctions.js"></script>
         <script type="text/javascript" src="../SourceRemoval.js"></script>
     </head>
-<section id="5NodeGraph" style="width: 100%">
-    <h2>
-        Goal: Remove all nodes using the source removal algorithm.
-    </h2>
-    <p> Here is a directed acyclic graph with 5 nodes. Click a node to remove it</p>
+    <body onload="welcome()">
+<section id="5NodeGraph">
+        <section>
+            <h2> Goal: Remove all nodes using the source removal algorithm.</h2>
+            <p> Here is a directed acyclic graph with 5 nodes. Click a node to remove it</p>
+        </section>
+
     <!-- Nodes have id's ANode, BNode, etc
          arrow images have id corresponding to their origin node -->
     <button type="button" id="secondNode" style="border-radius: 50%" onclick = "removeFirst(this)" value ="A" >Node A</button>
@@ -46,6 +48,7 @@
     </section>
 
 </section>
+
 <section id="5NodeGraphTable">
     <div class="row">
         <div class="column"> <h3> Adjacency list</h3>
@@ -90,4 +93,5 @@
     
     <div style="position:relative; top:20px" id = "Hints"> </div>
 </section>
+</body>
 </html>

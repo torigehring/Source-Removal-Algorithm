@@ -17,21 +17,23 @@
           createHeader("Source Removal Algorithm");
        </script>
       <!-- Content -->
-<p> The Source Removal Algorithm is a Decrease-and-Conquer way to topologically sort a directed graph. 
+<p style="text-align:center"> The Source Removal Algorithm is a Decrease-and-Conquer way to topologically sort a directed graph. 
 <br>A source is a vertex with no incoming edges.
 </p>
-<p> How many vertices would you like to solve? </p>
-    <select style="width: 80px" id="numStones" name="numStones" onchange="yesnoCheck(this)">
-    <option selected="" value="5">5</option>
-    <option  selected="" value="6">6</option>
-    <option  selected="" value="7">7</option> 
+<p style="text-align:center"> How many vertices would you like to solve? </p>
+<div style="text-align:center">
+    <select style="width: 80px;" id="numStones" name="numStones" onchange="yesnoCheck(this)">
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option> 
     </select>
+</div>
 <script>
     document.getElementById("numVertices").onchange = function() {funNumVertices()};
 </script>
 
 <!-- Beginning of Selection 5 Nodes-->
-<section id="5NodeGraph" style="width: 100%"></section>
+<section id="5NodeGraph"></section>
 <section id="6NodeGraph"></section>
 <section id="7NodeGraph"></section>
 <!-- End of Selection 5 Nodes-->
