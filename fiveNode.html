@@ -1,3 +1,7 @@
+<!-- TODO: 
+    - Fix hints
+ -->
+
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -20,9 +24,9 @@
 
     <!-- Nodes have id's ANode, BNode, etc
          arrow images have id corresponding to their origin node -->
-    <button type="button" id="secondNode" style="border-radius: 50%" onclick = "removeFirst(this)" value ="A" >Node A</button>
+    <button type="button" id="secondNode" style="border-radius: 50%" onclick = "removeFive(this)" value ="A" >Node A</button>
     <img src="arrow1.jpg" id="Aright" alt="arrow" style="width:20px;height:10px;" >
-    <button type="button" id="fourthNode" style="border-radius: 50%" onclick = "removeFirst(this)" value = "C" >Node C</button>
+    <button type="button" id="fourthNode" style="border-radius: 50%" onclick = "removeFive(this)" value = "C" >Node C</button>
     <img src="arrow1.jpg" id="Cdown" class="rotate30" alt="arrow" style="width:50px;height:10px;position:relative; top:15px" >
 
     <section>
@@ -31,24 +35,25 @@
         <img src="arrow1.jpg" id="Dup" class="rotate270" alt="arrow" style="width:40px;height:10px;position:relative; top:15px" >
 
         <div style="position:relative; left:200px; top:0px">   
-            <button type="button" id="fifthNode" style="border-radius: 50%" onclick = "removeFirst(this)" value = "E">Node E</button>
+            <button type="button" id="fifthNode" style="border-radius: 50%" onclick = "removeFive(this)" value = "E">Node E</button>
         </div>
         <div id = "SortedList" style="position:relative; left:400px; top:0px" >Sorted List:</div> <!-- This is where we can put the sorted list -->
     </section>
 
     <section>
-        <button type="button" id="firstNode" style="border-radius: 50%" onclick = "removeFirst(this)" value = "B">Node B</button>
+        <button type="button" id="firstNode" style="border-radius: 50%" onclick = "removeFive(this)" value = "B">Node B</button>
         <img src="arrow1.jpg" id="Bright" alt="arrow" style="width:20px;height:10px;" >
-        <button type="button" id="thirdNode" style="border-radius: 50%;position:relative; bottom:0px" id="D" onclick = "removeFirst(this)" value = "D">Node D</button>
+        <button type="button" id="thirdNode" style="border-radius: 50%;position:relative; bottom:0px" id="D" onclick = "removeFive(this)" value = "D">Node D</button>
         <img src="arrow1.jpg" id="Dright" class="rotate340" alt="arrow" style="width:50px;height:10px;position:relative;" >
     </section>
 
     <section style="position:relative; left:20px; top:20px">
         <button type="button" id="Hint" onclick = "hint()">ShowMe</button>
     </section>
-
 </section>
-
+<br>
+<div style="position:relative; top:20px" id = "Hints"> </div>
+<br>
 <section id="5NodeGraphTable">
     <div class="row">
         <div class="column"> <h3> Adjacency list</h3>
@@ -90,8 +95,6 @@
             <br> &emsp;&emsp;&emsp; if(adjacencyList[i][</br>
         </div>
       </div>
-    
-    <div style="position:relative; top:20px" id = "Hints"> </div>
 </section>
 </body>
 </html>
