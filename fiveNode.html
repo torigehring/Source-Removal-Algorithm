@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	    <!-- Chrome browser will display response in the form of html page by using above line. -->	
+		<link rel="stylesheet" href="general.css">
+		<script type="text/javascript" src="../general.js"></script>
+		<script type="text/javascript" src="../tableFunctions.js"></script>
+		<script type="text/javascript" src="../headerFunction.js"></script>
+        <script type="text/javascript" src="../pseudocodeFunctions.js"></script>
+        <script type="text/javascript" src="../SourceRemoval.js"></script>
+    </head>
+<section id="5NodeGraph" style="width: 100%">
+    <h2>
+        Goal: Remove all nodes using the source removal algorithm.
+    </h2>
+    <p> Here is a directed acyclic graph with 5 nodes. Click a node to remove it</p>
+    <!-- Nodes have id's ANode, BNode, etc
+         arrow images have id corresponding to their origin node -->
+    <button type="button" id="secondNode" style="border-radius: 50%" onclick = "removeFirst(this)" value ="A" >Node A</button>
+    <img src="arrow1.jpg" id="Aright" alt="arrow" style="width:20px;height:10px;" >
+    <button type="button" id="fourthNode" style="border-radius: 50%" onclick = "removeFirst(this)" value = "C" >Node C</button>
+    <img src="arrow1.jpg" id="Cdown" class="rotate30" alt="arrow" style="width:50px;height:10px;position:relative; top:15px" >
+
+    <section>
+        <img src="arrow1.jpg" id="Bup" class="rotate270" alt="arrow" style="width:40px;height:10px;position:relative; top:15px" >
+        <img src="arrow1.jpg" id="Adown" class="rotate30" alt="arrow" style="width:60px;height:10px;position:relative; top:15px" >
+        <img src="arrow1.jpg" id="Dup" class="rotate270" alt="arrow" style="width:40px;height:10px;position:relative; top:15px" >
+
+        <div style="position:relative; left:200px; top:0px">   
+            <button type="button" id="fifthNode" style="border-radius: 50%" onclick = "removeFirst(this)" value = "E">Node E</button>
+        </div>
+        <div id = "SortedList" style="position:relative; left:400px; top:0px" >Sorted List:</div> <!-- This is where we can put the sorted list -->
+    </section>
+
+    <section>
+        <button type="button" id="firstNode" style="border-radius: 50%" onclick = "removeFirst(this)" value = "B">Node B</button>
+        <img src="arrow1.jpg" id="Bright" alt="arrow" style="width:20px;height:10px;" >
+        <button type="button" id="thirdNode" style="border-radius: 50%;position:relative; bottom:0px" id="D" onclick = "removeFirst(this)" value = "D">Node D</button>
+        <img src="arrow1.jpg" id="Dright" class="rotate340" alt="arrow" style="width:50px;height:10px;position:relative;" >
+    </section>
+
+    <section style="position:relative; left:20px; top:20px">
+        <button type="button" id="Hint" onclick = "hint()">ShowMe</button>
+    </section>
+
+</section>
+<section id="5NodeGraphTable">
+    <div class="row">
+        <div class="column"> <h3> Adjacency list</h3>
+            <table style="width:90%" border="1">
+                <tr>
+                  <th>Node</th>
+                  <th>Arrows going into Node</th>
+                </tr>
+                <tr>
+                  <td>A</td>
+                  <td>B</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>A, D</td>
+                </tr>
+                <tr>
+                    <td>D</td>
+                    <td>A, B</td>
+                </tr>
+                <tr>
+                    <td>E</td>
+                    <td>C, D</td>
+                </tr>
+              </table>
+         </div>
+        <div class="column"> 
+            <h3> Pseudocode</h3>
+            <br> for( i = 0; i < numNodes; i++){</br>
+            <br> &emsp; Char removedNode;</br>
+            <br> &emsp; if(adjacencyList[i][0] == '-'){</br>
+            <br> &emsp;&emsp; adjacencyList.remove(i)</br>
+            <br> &emsp;&emsp; adjacencyList.remove(i)</br>
+            <br> &emsp;&emsp; for( j = 0; j < numNodes; j++){</br>
+            <br> &emsp;&emsp;&emsp; if(adjacencyList[i][</br>
+        </div>
+      </div>
+    
+    <div style="position:relative; top:20px" id = "Hints"> </div>
+</section>
+</html>

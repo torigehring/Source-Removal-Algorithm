@@ -70,3 +70,19 @@ h1 {
   -ms-transform: rotate(340deg);
   transform: rotate(340deg);
 }
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+html, body {
+  height: 100%;
+  width: 100%
+}
