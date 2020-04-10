@@ -18,27 +18,27 @@
     <p> Here is a directed acyclic graph with 7 nodes. Click a node to remove it</p>
     <!-- Nodes have id's ANode, BNode, etc
          arrow images have id corresponding to their origin node -->
-    <button type="button" id="secondNode" style="border-radius: 50%" onclick = "removeFirst(this)" value ="A" >Node A</button>
-    <img src="arrow1.jpg" id="Aright" alt="arrow" style="width:20px;height:10px;" >
-    <button type="button" id="fourthNode" style="border-radius: 50%" onclick = "removeFirst(this)" value = "B" >Node B</button>
-    <img src="arrow1.jpg" id="Bright" alt="arrow" style="width:20px;height:10px;" >
-    <button type="button" id="fourthNode" style="border-radius: 50%" onclick = "removeFirst(this)" value = "C" >Node C</button>
-    <img src="arrow1.jpg" id="Cright" alt="arrow" style="width:20px;height:10px;" >
-    <button type="button" id="fourthNode" style="border-radius: 50%" onclick = "removeFirst(this)" value = "D" >Node D</button>
+    <button type="button" id="thirdNode" style="border-radius: 50%" onclick = "removeSeven(this)" value ="A" >Node A</button>
+    <img src="arrow1.jpg" id="Aright2" alt="arrow" style="width:20px;height:10px;" >
+    <button type="button" id="fourthNode" style="border-radius: 50%" onclick = "removeSeven(this)" value = "B" >Node B</button>
+    <img src="arrow1.jpg" id="Bright2" alt="arrow" style="width:20px;height:10px;" >
+    <button type="button" id="fifthNode" style="border-radius: 50%" onclick = "removeSeven(this)" value = "C" >Node C</button>
+    <img src="arrow1.jpg" id="Cright2" alt="arrow" style="width:20px;height:10px;" >
+    <button type="button" id="sixthNode" style="border-radius: 50%" onclick = "removeSeven(this)" value = "D" >Node D</button>
     <section>
         <img src="arrow1.jpg" id="Eup" class="rotate240" alt="arrow" style="width:40px;height:10px;position:relative; top:15px" >
-        <img src="arrow1.jpg" id="Fup1" class="rotate240" alt="arrow" style="width:60px;height:10px;position:relative; top:15px; left:60px" >
-        <img src="arrow1.jpg" id="Fup2" class="rotate330" alt="arrow" style="width:60px;height:10px;position:relative; top:15px; left:40px" >
+        <img src="arrow1.jpg" id="FUleft" class="rotate240" alt="arrow" style="width:60px;height:10px;position:relative; top:15px; left:60px" >
+        <img src="arrow1.jpg" id="FUright" class="rotate330" alt="arrow" style="width:60px;height:10px;position:relative; top:15px; left:40px" >
         <img src="arrow1.jpg" id="Ddown" class="rotate120" alt="arrow" style="width:40px;height:10px;position:relative; top:15px; left:100px" >
         <div id = "SortedList" style="position:relative; left:400px; top:0px" >Sorted List:</div> <!-- This is where we can put the sorted list -->
     </section>
 
     <section>
-        <button type="button" id="firstNode" style="border-radius: 50%; position:relative; left:20px" onclick = "removeFirst(this)" value = "E">Node E</button>
+        <button type="button" id="secondNode" style="border-radius: 50%; position:relative; left:20px" onclick = "removeSeven(this)" value = "E">Node E</button>
         <img src="arrow1.jpg" id="Fleft" alt="arrow" class="rotate180" style="width:20px;height:10px;position:relative;left:30px" >
-        <button type="button" id="thirdNode" style="border-radius: 50%;position:relative; bottom:0px; left:30px" id="F" onclick = "removeFirst(this)" value = "F">Node F</button>
+        <button type="button" id="firstNode" style="border-radius: 50%;position:relative; bottom:0px; left:30px" id="F" onclick = "removeSeven(this)" value = "F">Node F</button>
         <img src="arrow1.jpg" id="Fright" alt="arrow" style="width:20px;height:10px; position:relative; left: 40px" >
-        <button type="button" id="fifthNode" style="border-radius: 50%; position:relative; left: 40px" onclick = "removeFirst(this)" value = "G">Node G</button>
+        <button type="button" id="seventhNode" style="border-radius: 50%; position:relative; left: 40px" onclick = "removeSeven(this)" value = "G">Node G</button>
     </section>
 
     <section style="position:relative; left:20px; top:20px">
