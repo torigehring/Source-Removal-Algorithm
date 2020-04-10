@@ -58,6 +58,30 @@ h1 {
   transform: rotate(270deg);
 }
 
+.rotate120 {
+  -webkit-transform: rotate(120deg);
+  -moz-transform: rotate(120deg);
+  -o-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+
+.rotate240 {
+  -webkit-transform: rotate(240deg);
+  -moz-transform: rotate(240deg);
+  -o-transform: rotate(240deg);
+  -ms-transform: rotate(240deg);
+  transform: rotate(240deg);
+}
+
+.rotate300 {
+  -webkit-transform: rotate(300deg);
+  -moz-transform: rotate(300deg);
+  -o-transform: rotate(300deg);
+  -ms-transform: rotate(300deg);
+  transform: rotate(300deg);
+}
+
 .rotate330 {
   -webkit-transform: rotate(330deg);
   -moz-transform: rotate(330deg);
