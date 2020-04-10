@@ -220,7 +220,7 @@ function removeSeven(button) {
         var arrow1 = document.getElementById("Fright");
         var arrow2 = document.getElementById("Fleft");
         var arrow3 = document.getElementById("FUright");
-        var arrow3 = document.getElementById("FUleft");
+        var arrow4 = document.getElementById("FUleft");
         if(nodeID == "firstNode"){
             button.style.visibility = "hidden";
             arrow1.style.visibility = "hidden";
@@ -292,8 +292,8 @@ function removeSeven(button) {
         }
     } 
 
-    if(fifthVisible == false){  // Sixth is E
-        var arrow1 = document.getElementById("Eright");
+    if(fifthVisible == false){  // Sixth is D
+        var arrow1 = document.getElementById("Ddown");
         if(nodeID == "sixthNode"){
             button.style.visibility = "hidden";
             arrow1.style.visibility = "hidden";
@@ -307,9 +307,9 @@ function removeSeven(button) {
     }
 
     if(sixthVisible == false){  // Seventh is G
-        if(nodeID == "sixthNode"){
+        if(nodeID == "seventhNode"){
             button.style.visibility = "hidden";
-            list.innerHTML = "Sorted List: FEABCE" + nodeValue;
+            list.innerHTML = "Sorted List: FEABCD" + nodeValue;
             hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
             sixthVisible = false;
         }
@@ -350,13 +350,13 @@ function yesnoCheck(that) {
 
 // Load the chosen graph in the correct location
 function loadGraph5(){
-    document.getElementById("5NodeGraph").innerHTML='<object type="text/html" data="fiveNode.html" width="1000" height="1000" align="center"></object>';
+    document.getElementById("5NodeGraph").innerHTML='<object type="text/html" data="fiveNode.html" width="1000" height="1000"></object>';
 }
 
 function loadGraph6(){
-    document.getElementById("6NodeGraph").innerHTML='<object type="text/html" data="sixNode.html" width="1000" height="1000" align="center"></object>';
+    document.getElementById("6NodeGraph").innerHTML='<object type="text/html" data="sixNode.html" width="1000" height="1000"></object>';
 }
 
 function loadGraph7(){
-    document.getElementById("7NodeGraph").innerHTML='<object type="text/html" data="sevenNode.html" width="1000" height="10000" align="center"></object>';
+    document.getElementById("7NodeGraph").innerHTML='<object type="text/html" data="sevenNode.html" width="1000" height="10000"></object>';
 }
