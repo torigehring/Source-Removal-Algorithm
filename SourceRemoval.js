@@ -292,7 +292,7 @@ function removeSeven(button) {
         }
     } 
 
-    if(fifthVisible == false){  // Sixth is E
+    if(fifthVisible == false){  // Sixth is D
         var arrow1 = document.getElementById("Eright");
         if(nodeID == "sixthNode"){
             button.style.visibility = "hidden";
