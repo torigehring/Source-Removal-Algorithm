@@ -98,6 +98,10 @@ h1 {
   transform: rotate(340deg);
 }
 
+.object {
+  align: center;
+}
+
 .column {
   float: left;
   width: 50%;
