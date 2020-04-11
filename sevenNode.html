@@ -42,7 +42,7 @@
     </section>
 
     <section style="position:relative; left:20px; top:20px">
-        <button type="button" id="Hint" onclick = "hint()">ShowMe</button>
+        <button type="button" id="Hint" onclick = "hint7()">ShowMe</button>
     </section>
 </section>
 <br>
@@ -89,13 +89,16 @@
          </div>
         <div class="column"> 
             <h3> Pseudocode</h3>
-            <br> for( i = 0; i < numNodes; i++){</br>
-            <br> &emsp; Char removedNode;</br>
-            <br> &emsp; if(adjacencyList[i][0] == '-'){</br>
-            <br> &emsp;&emsp; adjacencyList.remove(i)</br>
-            <br> &emsp;&emsp; adjacencyList.remove(i)</br>
-            <br> &emsp;&emsp; for( j = 0; j < numNodes; j++){</br>
-            <br> &emsp;&emsp;&emsp; if(adjacencyList[i][</br>
+            int* topologicallyOrderedList 
+            <br> for i <-- 0 to numNodes
+            <br> &emsp; char currNodeBeingRemoved
+            <br> &emsp; for j <-- 0 to numNodes
+            <br> &emsp; &emsp; if adjacencyList[i][j] is in topologicallyOrderedList
+            <br> &emsp; &emsp; &emsp; remove adjacencyList[i][j]
+            <br> &emsp; &emsp; if adjacencyList[i][j] is empty
+            <br> &emsp; &emsp; &emsp; remove adjacencyList[i]
+            <br> &emsp; &emsp; &emsp; currNodeBeingRemoved <-- i
+            <br> &emsp; &emsp; &emsp; topologicallyOrderedList += i 
         </div>
       </div>
 </section>
