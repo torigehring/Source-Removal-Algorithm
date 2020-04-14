@@ -304,7 +304,7 @@ function removeSeven(button) {
 async function hint5(){
     var list = document.getElementById("SortedList");
     var hints = document.getElementById("Hints");
-
+    
     if(fourthVisible == false){  // Fifth is E
         var button = document.getElementById("fifthNode");
         var nodeValue = 'E';
