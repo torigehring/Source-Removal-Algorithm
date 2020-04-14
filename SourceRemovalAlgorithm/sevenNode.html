@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	    <!-- Chrome browser will display response in the form of html page by using above line. -->	
+		<link rel="stylesheet" href="general.css">
+		<script type="text/javascript" src="../general.js"></script>
+		<script type="text/javascript" src="../tableFunctions.js"></script>
+		<script type="text/javascript" src="../headerFunction.js"></script>
+        <script type="text/javascript" src="../pseudocodeFunctions.js"></script>
+        <script type="text/javascript" src="../SourceRemoval.js"></script>
+    </head>
+<section id="7NodeGraph">
+    <h2>
+        Goal: Remove all nodes using the source removal algorithm.
+    </h2>
+    <p> Here is a directed acyclic graph with 7 nodes. Click a node to remove it</p>
+    <!-- Nodes have id's ANode, BNode, etc
+         arrow images have id corresponding to their origin node -->
+    <button type="button" id="thirdNode" style="border-radius: 50%" onclick = "removeSeven(this)" value ="A" >Node A</button>
+    <img src="arrow1.jpg" id="Aright2" alt="arrow" style="width:20px;height:10px;" >
+    <button type="button" id="fourthNode" style="border-radius: 50%" onclick = "removeSeven(this)" value = "B" >Node B</button>
+    <img src="arrow1.jpg" id="Bright2" alt="arrow" style="width:20px;height:10px;" >
+    <button type="button" id="fifthNode" style="border-radius: 50%" onclick = "removeSeven(this)" value = "C" >Node C</button>
+    <img src="arrow1.jpg" id="Cright2" alt="arrow" style="width:20px;height:10px;" >
+    <button type="button" id="sixthNode" style="border-radius: 50%" onclick = "removeSeven(this)" value = "D" >Node D</button>
+    <section>
+        <img src="arrow1.jpg" id="Eup" class="rotate240" alt="arrow" style="width:40px;height:10px;position:relative; top:10px; left:10px" >
+        <img src="arrow1.jpg" id="FUleft" class="rotate240" alt="arrow" style="width:60px;height:10px;position:relative; top:15px; left:50px" >
+        <img src="arrow1.jpg" id="FUright" class="rotate330" alt="arrow" style="width:60px;height:10px;position:relative; top:15px; left:30px" >
+        <img src="arrow1.jpg" id="Ddown" class="rotate120" alt="arrow" style="width:40px;height:10px;position:relative; top:15px; left:65px" >
+        <div id = "SortedList" style="position:relative; left:400px; top:0px" >Sorted List:</div> <!-- This is where we can put the sorted list -->
+    </section>
+
+    <section>
+        <button type="button" id="secondNode" style="border-radius: 50%; position:relative; left:20px" onclick = "removeSeven(this)" value = "E">Node E</button>
+        <img src="arrow1.jpg" id="Fleft" alt="arrow" class="rotate180" style="width:20px;height:10px;position:relative;left:30px" >
+        <button type="button" id="firstNode" style="border-radius: 50%;position:relative; bottom:0px; left:30px" id="F" onclick = "removeSeven(this)" value = "F">Node F</button>
+        <img src="arrow1.jpg" id="Fright" alt="arrow" style="width:20px;height:10px; position:relative; left: 40px" >
+        <button type="button" id="seventhNode" style="border-radius: 50%; position:relative; left: 40px" onclick = "removeSeven(this)" value = "G">Node G</button>
+    </section>
+
+    <section style="position:relative; left:20px; top:20px">
+        <button type="button" id="Hint" onclick = "hint7()">ShowMe</button>
+    </section>
+</section>
+<br>
+<div style="position:relative; top:20px" id = "Hints"> </div>
+<br>
+
+<section id="7NodeGraphTable">
+    <div class="row">
+        <div class="column"> <h3> Adjacency list</h3>
+            <table style="width:90%" border="1">
+                <tr>
+                  <th>Node</th>
+                  <th>Arrows going into Node</th>
+                </tr>
+                <tr>
+                  <td>A</td>
+                  <td>E</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>A, F</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>B, F</td>
+                </tr>
+                <tr>
+                    <td>D</td>
+                    <td>C</td>
+                </tr>
+                <tr>
+                    <td>E</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>G</td>
+                    <td>D, F</td>
+                </tr>
+              </table>
+         </div>
+        <div class="column"> 
+            <h3> Pseudocode</h3>
+            int* topologicallyOrderedList 
+            <br> for i <-- 0 to numNodes
+            <br> &emsp; char currNodeBeingRemoved
+            <br> &emsp; for j <-- 0 to numNodes
+            <br> &emsp; &emsp; if adjacencyList[i][j] is in topologicallyOrderedList
+            <br> &emsp; &emsp; &emsp; remove adjacencyList[i][j]
+            <br> &emsp; &emsp; if adjacencyList[i][j] is empty
+            <br> &emsp; &emsp; &emsp; remove adjacencyList[i]
+            <br> &emsp; &emsp; &emsp; currNodeBeingRemoved <-- i
+            <br> &emsp; &emsp; &emsp; topologicallyOrderedList += i 
+        </div>
+      </div>
+</section>

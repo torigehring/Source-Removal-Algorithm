@@ -1,0 +1,60 @@
+<!-- TODO: 
+    - Fix 5 not working to click on first
+    - Get 6 Nodes page working 
+    - Get 7 Nodes page working
+ -->
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+		<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	    <!-- Chrome browser will display response in the form of html page by using above line. -->	
+		<link rel="stylesheet" href="general.css">
+		<script type="text/javascript" src="../general.js"></script>
+		<script type="text/javascript" src="../tableFunctions.js"></script>
+		<script type="text/javascript" src="../headerFunction.js"></script>
+        <script type="text/javascript" src="../pseudocodeFunctions.js"></script>
+        <script type="text/javascript" src="../SourceRemoval.js"></script>
+    </head>
+    <body onload="welcome()">
+        <!-- Header -->	
+        <script>
+          createHeader("Source Removal Algorithm");
+       </script>
+      <!-- Content -->
+<p style="text-align:center"> The Source Removal Algorithm is a Decrease-and-Conquer way to topologically sort a directed graph. 
+<br>A source is a vertex with no incoming edges.
+</p>
+<p style="text-align:center"> How many vertices would you like to solve? </p>
+<div style="text-align:center">
+    <select style="width: 80px;" id="numStones" name="numStones" onchange="yesnoCheck(this)">
+    <option value="5"># nodes</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option> 
+    </select>
+</div>
+<script>
+    document.getElementById("numVertices").onchange = function() {funNumVertices()};
+</script>
+
+<!-- Beginning of Selection 5 Nodes-->
+<section id="5NodeGraph"></section>
+<section id="6NodeGraph"></section>
+<section id="7NodeGraph"></section>
+<!-- End of Selection 5 Nodes-->
+
+ <script>
+ document.getElementById("KCapacity").onchange = function() {funKCapacity()};
+ </script>
+ <BR>
+ <input style="visibility:hidden;" type="button" id="ButtonShowMe" value="ShowMe"
+onclick="nextStep()" disabled>
+ <input style="visibility:hidden;" type="button" id="ButtonYes" value="Yes" onclick="choseYes()"
+disabled>
+ <input style="visibility:hidden;" type="button" id="ButtonNo"value="No" onclick="choseNo()"
+disabled>
+
+</body>
+</html>
