@@ -23,7 +23,6 @@ function removeFive(button) {
     var nodeID = button.id;
     var nodeValue = button.value;
     var list = document.getElementById("SortedList");
-    var hints = document.getElementById("Hints");
 
     if(firstVisible == true){  // First is B
         var arrow1 = document.getElementById("Bup");
@@ -34,7 +33,6 @@ function removeFive(button) {
             arrow2.style.visibility = "hidden";
             if(nodeValue == 'B'){
                 list.innerHTML = "Sorted List: " + nodeValue;
-                hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
                 firstVisible = false;
             }
         } 
@@ -49,7 +47,6 @@ function removeFive(button) {
             arrow2.style.visibility = "hidden";
             if(nodeValue == 'A'){
                 list.innerHTML = "Sorted List: B" + nodeValue;
-                hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
                 secVisible = false;
             }
         } 
@@ -64,7 +61,6 @@ function removeFive(button) {
             arrow2.style.visibility = "hidden";
             if(nodeValue == 'D'){
                 list.innerHTML = "Sorted List: BA" + nodeValue;
-                hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
                 thirdVisible = false;
             }
         }
@@ -77,7 +73,6 @@ function removeFive(button) {
             arrow1.style.visibility = "hidden";
             if(nodeValue == 'C'){
                 list.innerHTML = "Sorted List: BAD" + nodeValue;
-                hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
                 fourthVisible = false;
             }
         }
@@ -89,7 +84,6 @@ function removeFive(button) {
             button.style.visibility = "hidden";
             if(nodeValue == 'E'){
                 list.innerHTML = "Sorted List: BADC" + nodeValue;
-                hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
                 fifthVisible = false;
             }
         }
@@ -100,7 +94,6 @@ function removeSix(button) {
     var nodeID = button.id;
     var nodeValue = button.value;
     var list = document.getElementById("SortedList");
-    var hints = document.getElementById("Hints");
 
     if(firstVisible == true){  // First is A
         var arrow1 = document.getElementById("Aright1");
@@ -113,7 +106,6 @@ function removeSix(button) {
             arrow3.style.visibility = "hidden";
             if(nodeValue == 'A'){
                 list.innerHTML = "Sorted List: " + nodeValue;
-                hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
                 firstVisible = false;
             }
             
@@ -127,7 +119,6 @@ function removeSix(button) {
             arrow1.style.visibility = "hidden";
             if(nodeValue == 'B'){
                 list.innerHTML = "Sorted List: A" + nodeValue;
-                hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
                 secVisible = false;
             } 
         }
@@ -142,7 +133,6 @@ function removeSix(button) {
             arrow2.style.visibility = "hidden";
             if(nodeValue == 'D'){
                 list.innerHTML = "Sorted List: AB" + nodeValue;
-                hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
                 thirdVisible = false;
             }
         }
@@ -157,7 +147,6 @@ function removeSix(button) {
             arrow2.style.visibility = "hidden";
             if(nodeValue == 'C'){
                 list.innerHTML = "Sorted List: ABD" + nodeValue;
-                hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
                 fourthVisible = false;
             }
             
@@ -171,7 +160,6 @@ function removeSix(button) {
             arrow1.style.visibility = "hidden";
             if(nodeValue == 'E'){
                 list.innerHTML = "Sorted List: ABDC" + nodeValue;
-                hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
                 fifthVisible = false;
             }
         }
@@ -182,7 +170,6 @@ function removeSix(button) {
             button.style.visibility = "hidden";
             if(nodeValue == 'F'){
                 list.innerHTML = "Sorted List: ABDCE" + nodeValue;
-                hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
                 sixthVisible = false;
             }
         }
@@ -193,7 +180,6 @@ function removeSeven(button) {
     var nodeID = button.id;
     var nodeValue = button.value;
     var list = document.getElementById("SortedList");
-    var hints = document.getElementById("Hints");
 
     if(firstVisible == true){  // First is F
         var arrow1 = document.getElementById("Fright");
@@ -208,7 +194,6 @@ function removeSeven(button) {
             arrow4.style.visibility = "hidden";
             if(nodeValue == 'F'){
                 list.innerHTML = "Sorted List: " + nodeValue;
-                hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
                 firstVisible = false;
             }
         }
@@ -221,7 +206,6 @@ function removeSeven(button) {
             arrow1.style.visibility = "hidden";
             if(nodeValue == 'E'){
                 list.innerHTML = "Sorted List: F" + nodeValue;
-                hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
                 secVisible = false;
             }
         }
@@ -234,7 +218,6 @@ function removeSeven(button) {
             arrow1.style.visibility = "hidden";
             if(nodeValue == 'A'){
                 list.innerHTML = "Sorted List: FE" + nodeValue;
-                hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
                 thirdVisible = false;
             }
         }
@@ -247,7 +230,6 @@ function removeSeven(button) {
             arrow1.style.visibility = "hidden";
             if(nodeValue == 'B'){
                 list.innerHTML = "Sorted List: FEA" + nodeValue;
-                hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
                 fourthVisible = false;
             }
         }
@@ -260,7 +242,6 @@ function removeSeven(button) {
             arrow1.style.visibility = "hidden";
             if(nodeValue == 'C'){
                 list.innerHTML = "Sorted List: FEAB" + nodeValue;
-                hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
                 fifthVisible = false;
             }
         }
@@ -273,7 +254,6 @@ function removeSeven(button) {
             arrow2.style.visibility = "hidden";
             if(nodeValue == 'D'){
                 list.innerHTML = "Sorted List: FEABC" + nodeValue;
-                hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
                 sixthVisible = false;
             }
         }
@@ -284,7 +264,6 @@ function removeSeven(button) {
             button.style.visibility = "hidden";
             if(nodeValue == 'G'){
                 list.innerHTML = "Sorted List: FEABCD" + nodeValue;
-                hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
                 seventhVisible = false;
             }
         }
@@ -295,12 +274,11 @@ async function hint5(){
     var list = document.getElementById("SortedList");
     var hints = document.getElementById("Hints");
     list.innerHTML = "Sorted List: BADCE"
+
     if(fourthVisible == false){  // Fifth is E
         var button = document.getElementById("fifthNode");
         var nodeValue = 'E';
         button.style.visibility = "hidden";
-        // list.innerHTML = "Sorted List: BADC" + nodeValue;
-        hints.innerHTML = " " + nodeValue + " is the next source node.";
         fifthVisible = false;
     } 
     if(thirdVisible == false){  // Fourth is C
@@ -309,8 +287,6 @@ async function hint5(){
         var nodeValue = 'C';
         button.style.visibility = "hidden";
         arrow1.style.visibility = "hidden";
-        //list.innerHTML = "Sorted List: BAD"+ nodeValue;
-        hints.innerHTML = " " + nodeValue + " is the next source node.";
         fourthVisible = false;
         
     } 
@@ -322,8 +298,6 @@ async function hint5(){
         button.style.visibility = "hidden";
         arrow1.style.visibility = "hidden";
         arrow2.style.visibility = "hidden";
-        //list.innerHTML = "Sorted List: BA"  + nodeValue;
-        hints.innerHTML = " " + nodeValue + " is the next source node.";
         thirdVisible = false;
         
     } 
@@ -335,8 +309,6 @@ async function hint5(){
         button.style.visibility = "hidden";
         arrow1.style.visibility = "hidden";
         arrow2.style.visibility = "hidden";
-        //list.innerHTML = "Sorted List: B" + nodeValue;
-        hints.innerHTML = " " + nodeValue + " is the next source node.";
         secVisible = false;
         
     } 
@@ -348,22 +320,18 @@ async function hint5(){
         button.style.visibility = "hidden";
         arrow1.style.visibility = "hidden";
         arrow2.style.visibility = "hidden";
-        //list.innerHTML = "Sorted List: " + nodeValue;
-        hints.innerHTML = " " + nodeValue + " is the first source node.";
         firstVisible = false;
     }
 }
 
 function hint6() {
     var list = document.getElementById("SortedList");
-    var hints = document.getElementById("Hints");
     list.innerHTML = "Sorted List: ABDCEF";
+
     if(fifthVisible == false){  // Sixth is F
         var nodeValue = 'F';
         var button = document.getElementById("sixthNode");
         button.style.visibility = "hidden";
-        // list.innerHTML = "Sorted List: ABDCE" + nodeValue;
-        hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
         sixthVisible = false;
     } 
     if(fourthVisible == false){  // Fifth is E
@@ -372,8 +340,6 @@ function hint6() {
         var button = document.getElementById("fifthNode");
         button.style.visibility = "hidden";
         arrow1.style.visibility = "hidden";
-        // list.innerHTML = "Sorted List: ABDC" + nodeValue;
-        hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
         fifthVisible = false;
     } 
     if(thirdVisible == false){  // Fourth is C
@@ -384,8 +350,6 @@ function hint6() {
         button.style.visibility = "hidden";
         arrow1.style.visibility = "hidden";
         arrow2.style.visibility = "hidden";
-        // list.innerHTML = "Sorted List: ABD" + nodeValue;
-        hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
         fourthVisible = false;
     } 
     if(secVisible == false){  // Third is D
@@ -396,8 +360,6 @@ function hint6() {
         button.style.visibility = "hidden";
         arrow1.style.visibility = "hidden";
         arrow2.style.visibility = "hidden";
-        // list.innerHTML = "Sorted List: AB" + nodeValue;
-        hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
         thirdVisible = false;
     } 
     if(firstVisible == false){  // Second is B
@@ -406,8 +368,6 @@ function hint6() {
         var arrow1 = document.getElementById("Bright1");
         button.style.visibility = "hidden";
         arrow1.style.visibility = "hidden";
-        // list.innerHTML = "Sorted List: A" + nodeValue;
-        hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
         secVisible = false;
     } 
     if(firstVisible == true){  // First is A
@@ -420,22 +380,18 @@ function hint6() {
         arrow1.style.visibility = "hidden";
         arrow2.style.visibility = "hidden";
         arrow3.style.visibility = "hidden";
-        // list.innerHTML = "Sorted List: " + nodeValue;
-        hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
         firstVisible = false;
     } 
 }
 
 function hint7() {
     var list = document.getElementById("SortedList");
-    var hints = document.getElementById("Hints");
     list.innerHTML = "Sorted List: FEABCDG";
+
     if(sixthVisible == false){  // Seventh is G
         var nodeValue = 'G';
         var button = document.getElementById("seventhNode");
         button.style.visibility = "hidden";
-        //list.innerHTML = "Sorted List: FEABCD" + nodeValue;
-        hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
         seventhVisible = false;
     } 
     if(fifthVisible == false){  // Sixth is D
@@ -444,8 +400,6 @@ function hint7() {
         var arrow2 = document.getElementById("Ddown");
         button.style.visibility = "hidden";
         arrow2.style.visibility = "hidden";
-        //list.innerHTML = "Sorted List: FEABC" + nodeValue;
-        hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
         sixthVisible = false;
     }
     if(fourthVisible == false){  // Fifth is C
@@ -454,8 +408,6 @@ function hint7() {
         var arrow1 = document.getElementById("Cright2");
         button.style.visibility = "hidden";
         arrow1.style.visibility = "hidden";
-        //list.innerHTML = "Sorted List: FEAB" + nodeValue;
-        hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
         fifthVisible = false;
     }
     if(thirdVisible == false){  // Fourth is B
@@ -464,8 +416,6 @@ function hint7() {
         var arrow1 = document.getElementById("Bright2");
         button.style.visibility = "hidden";
         arrow1.style.visibility = "hidden";
-        //list.innerHTML = "Sorted List: FEA" + nodeValue;
-        hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
         fourthVisible = false;
     }
     if(secVisible == false){  // Third is A
@@ -474,8 +424,6 @@ function hint7() {
         var button = document.getElementById("thirdNode");
         button.style.visibility = "hidden";
         arrow1.style.visibility = "hidden";
-        //list.innerHTML = "Sorted List: FE" + nodeValue;
-        hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
         thirdVisible = false;
     }
     if(firstVisible == true){  // First is F
@@ -490,7 +438,6 @@ function hint7() {
         arrow3.style.visibility = "hidden";
         arrow4.style.visibility = "hidden";
         button.style.visibility = "hidden";
-        //list.innerHTML = "Sorted List: " + nodeValue;
         firstVisible = false;
     }else if(firstVisible == false){  // Second is E
         var nodeValue = 'E';
@@ -498,8 +445,6 @@ function hint7() {
         var arrow1 = document.getElementById("Eup");
         arrow1.style.visibility = "hidden";
         button.style.visibility = "hidden";
-        //list.innerHTML = "Sorted List: F" + nodeValue;
-        hints.innerHTML = "Correct! Node " + nodeValue + " was the one you were supposed to remove.";
         secVisible = false;
     } 
 }
