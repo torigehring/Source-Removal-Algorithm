@@ -25,6 +25,7 @@ function removeFive(button) {
     var list = document.getElementById("SortedList");
 
     if(firstVisible == true){  // First is B
+        document.getElementById("first").style.color = "red";
         var arrow1 = document.getElementById("Bup");
         var arrow2 = document.getElementById("Bright");
         if(nodeID == "firstNode"){
@@ -34,6 +35,7 @@ function removeFive(button) {
             if(nodeValue == 'B'){
                 list.innerHTML = "Sorted List: " + nodeValue;
                 firstVisible = false;
+                document.getElementById("first").style.color = "black";
             }
         } 
     }
