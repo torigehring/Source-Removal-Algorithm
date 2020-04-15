@@ -1,7 +1,3 @@
-// TODO: 
-// - Fix center alignment for object tag
-// - Fix hints
-
 // JS functions for the Source Removal Algorithm
 var numVertices = 5;
 var myTableId = "myTable";
