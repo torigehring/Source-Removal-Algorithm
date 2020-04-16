@@ -19,12 +19,47 @@ function funNumVertices() {
     // TODO: implement this function's functionality   
 }
 
+function manipulatetable(tableName){
+    var table = document.getElementById(tableName);
+    var rows = table.getElementsByTagName("tr");
+    rows[2].style.backgroundColor = "#FF1493";
+    if(firstVisible == false){ // Make adj list changes for B
+        var x = rows[1].cells;
+        x[1].innerHTML = "-";
+        var y = rows[4].cells;
+        y[1].innerHTML = "A";
+        rows[2].style.backgroundColor = "#000000";
+    }
+    if(secVisible == false){ // make adj list changes for A
+        rows[1].style.backgroundColor = "#000000"
+        var x = rows[3].cells;
+        x[1].innerHTML = "D";
+        var y = rows[4].cells;
+        y[1].innerHTML = "-";
+    }
+    if(thirdVisible == false){ // make adj list changes for D
+        rows[4].style.backgroundColor = "#000000"
+        var x = rows[3].cells;
+        x[1].innerHTML = "-";
+        var y = rows[5].cells;
+        y[1].innerHTML = "C";
+    }
+    if(fourthVisible == false){ // make adj list changes for C
+        rows[3].style.backgroundColor = "#000000"
+        var x = rows[5].cells;
+        x[1].innerHTML = "-";
+    }
+    if(fifthVisible == false){
+        rows[5].style.backgroundColor = "#000000"
+    }
+   
+}
+
 function removeFive(button) {
     var nodeID = button.id;
     var nodeValue = button.value;
     var list = document.getElementById("SortedList");
     var hints = document.getElementById("Hints");
-
     if(firstVisible == true){  // First is B
         var arrow1 = document.getElementById("Bup");
         var arrow2 = document.getElementById("Bright");
