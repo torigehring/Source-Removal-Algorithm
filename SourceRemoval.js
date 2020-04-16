@@ -54,6 +54,57 @@ function manipulatetable(tableName){
     }
    
 }
+function manipulatetable2(tableName){
+    var table = document.getElementById(tableName);
+    var rows = table.getElementsByTagName("tr");
+    rows[1].style.backgroundColor = "#FF1493";
+    if(firstVisible == false){ // Make adj list changes for A good
+        var x = rows[2].cells;
+        x[1].innerHTML = "B";
+        var y = rows[2].cells;
+        y[1].innerHTML = "-";
+        var y2 = rows[3].cells;
+        y2[1].innerHTML = "D";
+        var y3 = rows[4].cells;
+        y3[1].innerHTML = "B";
+        rows[1].style.backgroundColor = "#000000";
+    }
+    if(secVisible == false){ // make adj list changes for B good
+        rows[2].style.backgroundColor = "#000000"
+        var x = rows[4].cells;
+        x[1].innerHTML = "-";
+        var y = rows[4].cells;
+        y[1].innerHTML = "-";
+    }
+    if(thirdVisible == false){ // make adj list changes for D good
+        rows[4].style.backgroundColor = "#000000"
+        var x = rows[3].cells;
+        x[1].innerHTML = "C";
+        var y = rows[3].cells;
+        y[1].innerHTML = "-";
+        var y2 = rows[6].cells;
+        y2[1].innerHTML = "C, E";
+    }
+    if(fourthVisible == false){ // make adj list changes for C 
+        rows[3].style.backgroundColor = "#000000"
+        var x = rows[5].cells;
+        x[1].innerHTML = "-";
+        var y = rows[5].cells;
+        y[1].innerHTML = "-";
+        var y2 = rows[6].cells;
+        y2[1].innerHTML = "E";
+    }
+    if(fifthVisible == false){ // make adj list changes for E
+        rows[5].style.backgroundColor = "#000000"
+        var x = rows[6].cells;
+        x[1].innerHTML = "-";
+        var y = rows[6].cells;
+        y[1].innerHTML = "-";
+    }
+    if(sixthVisible == false){ // make adj list changes for F
+        rows[6].style.backgroundColor = "#000000"
+    }   
+}
 
 function removeFive(button) {
     var nodeID = button.id;
