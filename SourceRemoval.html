@@ -1,8 +1,4 @@
-<!-- TODO: 
-    - Fix 5 not working to click on first
-    - Get 6 Nodes page working 
-    - Get 7 Nodes page working
- -->
+<!-- Created by Isabel Hinkle and Victoria Gehring April 2020 -->
 
 <!DOCTYPE HTML>
 <html>
@@ -18,7 +14,7 @@
         <script type="text/javascript" src="../SourceRemoval.js"></script>
         <script type="text/javascript">
             function welcome(){
-                sayIt("Solve the topological sorting problem using the source removal algorithm.");
+                sayIt("Solve the topological sorting problem using the source removal algorithm. How many nodes would you like to solve?");
             }
         </script>
 
@@ -29,10 +25,13 @@
           createHeader("Source Removal Algorithm");
        </script>
       <!-- Content -->
-<p style="text-align:center"> The Source Removal Algorithm is a Decrease-and-Conquer way to topologically sort a directed graph. 
-<br>A source is a vertex with no incoming edges.
-</p>
-<p style="text-align:center"> How many vertices would you like to solve? </p>
+      
+    <p style="text-align:center"> The Source Removal Algorithm is a Decrease-and-Conquer way to topologically sort a directed graph. 
+        <br>A source is a vertex with no incoming edges.
+        <h4 style="text-align:center"> Page created by: Isabel Hinkle and Victoria Gehring</h4>
+        <br>
+    </p>
+<p style="text-align:center"> How many nodes would you like to solve? </p>
 <div style="text-align:center">
     <select style="width: 80px;" id="numStones" name="numStones" onchange="yesnoCheck(this)">
     <option value="5"># nodes</option>

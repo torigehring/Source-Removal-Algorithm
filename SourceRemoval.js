@@ -22,7 +22,6 @@ function funNumVertices() {
 function manipulatetable(tableName){
     var table = document.getElementById(tableName);
     var rows = table.getElementsByTagName("tr");
-    rows[2].style.backgroundColor = "#FF1493";
     if(firstVisible == false){ // Make adj list changes for B
         var x = rows[1].cells;
         x[1].innerHTML = "-";
@@ -54,10 +53,10 @@ function manipulatetable(tableName){
     }
    
 }
+
 function manipulatetable2(tableName){
     var table = document.getElementById(tableName);
     var rows = table.getElementsByTagName("tr");
-    rows[1].style.backgroundColor = "#FF1493";
     if(firstVisible == false){ // Make adj list changes for A good
         var x = rows[2].cells;
         x[1].innerHTML = "B";
@@ -69,14 +68,14 @@ function manipulatetable2(tableName){
         y3[1].innerHTML = "B";
         rows[1].style.backgroundColor = "#000000";
     }
-    if(secVisible == false){ // make adj list changes for B good
+    if(secVisible == false){ // make adj list changes for B 
         rows[2].style.backgroundColor = "#000000"
         var x = rows[4].cells;
         x[1].innerHTML = "-";
         var y = rows[4].cells;
         y[1].innerHTML = "-";
     }
-    if(thirdVisible == false){ // make adj list changes for D good
+    if(thirdVisible == false){ // make adj list changes for D 
         rows[4].style.backgroundColor = "#000000"
         var x = rows[3].cells;
         x[1].innerHTML = "C";
@@ -104,6 +103,62 @@ function manipulatetable2(tableName){
     if(sixthVisible == false){ // make adj list changes for F
         rows[6].style.backgroundColor = "#000000"
     }   
+}
+
+function manipulatetable3(tableName){
+    var table = document.getElementById(tableName);
+    var rows = table.getElementsByTagName("tr");
+    if(firstVisible == false){ // Make adj list changes for F good
+        rows[6].style.backgroundColor = "#000000";
+        var x = rows[2].cells;
+        x[1].innerHTML = "B";
+        var y = rows[2].cells;
+        y[1].innerHTML = "A";
+        var y2 = rows[3].cells;
+        y2[1].innerHTML = "B";
+        var y3 = rows[5].cells;
+        y3[1].innerHTML = "-";
+        var y4 = rows[7].cells;
+        y4[1].innerHTML = "D";        
+    }
+    if(secVisible == false){ // make adj list changes for E good
+        rows[5].style.backgroundColor = "#000000"
+        var x = rows[1].cells;
+        x[1].innerHTML = "A";
+        var y = rows[1].cells;
+        y[1].innerHTML = "-";
+    }
+    if(thirdVisible == false){ // make adj list changes for A good
+        rows[1].style.backgroundColor = "#000000"
+        var x = rows[3].cells;
+        x[1].innerHTML = "B";
+        var y = rows[2].cells;
+        y[1].innerHTML = "-";
+    }
+    if(fourthVisible == false){ // make adj list changes for B good
+        rows[2].style.backgroundColor = "#000000"
+        var x = rows[3].cells;
+        x[1].innerHTML = "C";
+        var y = rows[3].cells;
+        y[1].innerHTML = "-";
+    }
+    if(fifthVisible == false){ // make adj list changes for C
+        rows[3].style.backgroundColor = "#000000"
+        var x = rows[4].cells;
+        x[1].innerHTML = "D";
+        var y = rows[4].cells;
+        y[1].innerHTML = "-";
+    }
+    if(sixthVisible == false){ // make adj list changes for D
+        rows[4].style.backgroundColor = "#000000"
+        var x = rows[7].cells;
+        x[1].innerHTML = "-";
+        var y = rows[4].cells;
+        y[1].innerHTML = "-";
+    }   
+    if(seventhVisible == false){ // make adj list changes for G
+        rows[7].style.backgroundColor = "#000000"
+    }    
 }
 
 function removeFive(button) {
